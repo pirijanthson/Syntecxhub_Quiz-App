@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@drawable/bg_splash">
+
+    <RelativeLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        tools:context=".home">
+
+        <!-- Header Container -->
+        <RelativeLayout
+            android:id="@+id/header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="20dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_alignParentStart="true">
+
+                <TextView
+                    android:id="@+id/welcome_msg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Welcome,"
+                    android:textColor="#CCCCCC"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/user_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Loading..."
+                    android:textColor="#FFFFFF"
+                    android:textSize="28sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/logout_btn"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:src="@android:drawable/ic_lock_power_off"
+                android:contentDescription="Logout"
+                android:clickable="true"
+                android:focusable="true"
+                app:tint="#FFFFFF" />
+        </RelativeLayout>
+
+        <!-- Search Bar -->
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/search_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/header"
+            android:layout_marginBottom="16dp"
+            android:background="@android:drawable/editbox_background"
+            app:iconifiedByDefault="false"
+            app:queryHint="Search languages..."
+            app:queryBackground="@android:color/transparent" />
+
+        <TextView
+            android:id="@+id/select_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/search_bar"
+            android:text="Select a language to start quiz"
+            android:textColor="#BBBBBB"
+            android:textSize="16sp"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Programming Languages Grid -->
+        <!-- Note: Using GridView inside ScrollView requires its height to be handled correctly.
+             If you have many items, the GridView itself is scrollable.
+             By wrapping the whole page in ScrollView, we ensure smaller screens can see everything. -->
+        <GridView
+            android:id="@+id/language_grid"
+            android:layout_width="match_parent"
+            android:layout_height="500dp"
+            android:layout_below="@id/select_title"
+            android:numColumns="2"
+            android:verticalSpacing="16dp"
+            android:horizontalSpacing="16dp"
+            android:stretchMode="columnWidth"
+            android:gravity="center"
+            android:scrollbarStyle="outsideOverlay"
+            android:layoutAnimation="@anim/layout_animation_fall_down" />
+
+    </RelativeLayout>
+</ScrollView>

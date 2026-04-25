@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@drawable/bg_splash">
+
+    <RelativeLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp">
+
+        <TextView
+            android:id="@+id/signup_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SIGN UP"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="60dp"/>
+
+        <EditText
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_below="@id/signup_title"
+            android:layout_marginTop="40dp"
+            android:hint="Full Name"
+            android:background="@android:drawable/editbox_background"
+            android:padding="12dp"
+            android:inputType="textPersonName"
+            android:textColor="#181717"
+            android:textColorHint="#999999"/>
+
+        <EditText
+            android:id="@+id/email"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_below="@id/name"
+            android:layout_marginTop="15dp"
+            android:hint="Email"
+            android:background="@android:drawable/editbox_background"
+            android:padding="12dp"
+            android:inputType="textEmailAddress"
+            android:textColor="#181717"
+            android:textColorHint="#999999"/>
+
+        <EditText
+            android:id="@+id/phone"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_below="@id/email"
+            android:layout_marginTop="15dp"
+            android:hint="Phone Number"
+            android:inputType="phone"
+            android:background="@android:drawable/editbox_background"
+            android:padding="12dp"
+            android:textColor="#181717"
+            android:textColorHint="#999999"/>
+
+        <RelativeLayout
+            android:id="@+id/pass_container"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_below="@id/phone"
+            android:layout_marginTop="15dp">
+
+            <EditText
+                android:id="@+id/password"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:background="@android:drawable/editbox_background"
+                android:paddingStart="12dp"
+                android:paddingEnd="45dp"
+                android:textColor="#181717"
+                android:textColorHint="#999999"/>
+
+            <ImageView
+                android:id="@+id/eyeBtn"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="10dp"
+                android:src="@android:drawable/ic_menu_view"
+                android:contentDescription="toggle password"
+                android:clickable="true"
+                android:focusable="true"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/repass_container"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_below="@id/pass_container"
+            android:layout_marginTop="15dp">
+
+            <EditText
+                android:id="@+id/Re_password"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="Re-Enter Password"
+                android:inputType="textPassword"
+                android:background="@android:drawable/editbox_background"
+                android:paddingStart="12dp"
+                android:paddingEnd="45dp"
+                android:textColor="#181717"
+                android:textColorHint="#999999"/>
+
+            <ImageView
+                android:id="@+id/eyeBtn2"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="10dp"
+                android:src="@android:drawable/ic_menu_view"
+                android:contentDescription="toggle password"
+                android:clickable="true"
+                android:focusable="true"/>
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/signupBtn"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_below="@id/repass_container"
+            android:layout_marginTop="30dp"
+            android:text="CREATE ACCOUNT"
+            android:textStyle="bold"
+            android:backgroundTint="#2979FF"
+            android:textColor="#FFFFFF"/>
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/signupBtn"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/login_link"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Already have an account? Login"
+            android:textColor="#FFFFFF"
+            android:layout_below="@id/progressBar"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:padding="10dp"
+            android:textSize="15sp"/>
+
+    </RelativeLayout>
+</ScrollView>

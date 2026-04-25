@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="signup_title" type="id" />
+    <item name="name" type="id" />
+    <item name="phone" type="id" />
+    <item name="Re_password" type="id" />
+    <item name="eyeBtn2" type="id" />
+    <item name="login_link" type="id" />
+</resources>

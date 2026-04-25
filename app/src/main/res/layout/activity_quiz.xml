@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_splash"
+    android:padding="20dp"
+    tools:context=".QuizActivity">
+
+    <!-- Header: Language Name and Score -->
+    <RelativeLayout
+        android:id="@+id/quiz_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:id="@+id/selected_lang_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Java Quiz"
+            android:textColor="#FFFFFF"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:id="@+id/score_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Score: 0"
+            android:textColor="#FFEB3B"
+            android:textSize="18sp"
+            android:layout_alignParentEnd="true" />
+    </RelativeLayout>
+
+    <!-- Progress Indicator -->
+    <TextView
+        android:id="@+id/question_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/quiz_header"
+        android:layout_marginTop="30dp"
+        android:text="Question 1/5"
+        android:textColor="#CCCCCC"
+        android:textSize="16sp" />
+
+    <!-- Question Card -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/question_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/question_count"
+        android:layout_marginTop="10dp"
+        app:cardBackgroundColor="#2D3E50"
+        app:cardCornerRadius="15dp"
+        app:cardElevation="10dp">
+
+        <TextView
+            android:id="@+id/question_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="25dp"
+            android:text="Wait, what is the default value of boolean variable in Java?"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:gravity="center"/>
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- Options Container -->
+    <LinearLayout
+        android:id="@+id/options_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/question_card"
+        android:layout_marginTop="40dp"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/option1"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginBottom="12dp"
+            android:backgroundTint="#3A4F63"
+            android:text="Option 1"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF" />
+
+        <Button
+            android:id="@+id/option2"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginBottom="12dp"
+            android:backgroundTint="#3A4F63"
+            android:text="Option 2"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF" />
+
+        <Button
+            android:id="@+id/option3"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginBottom="12dp"
+            android:backgroundTint="#3A4F63"
+            android:text="Option 3"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF" />
+
+        <Button
+            android:id="@+id/option4"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginBottom="12dp"
+            android:backgroundTint="#3A4F63"
+            android:text="Option 4"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF" />
+    </LinearLayout>
+
+    <!-- Navigation Buttons -->
+    <Button
+        android:id="@+id/next_btn"
+        android:layout_width="150dp"
+        android:layout_height="55dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="30dp"
+        android:backgroundTint="#2979FF"
+        android:text="NEXT"
+        android:textStyle="bold"
+        android:visibility="gone"/>
+
+</RelativeLayout>
