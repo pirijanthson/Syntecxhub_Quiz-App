@@ -137,6 +137,21 @@ public class home extends AppCompatActivity {
         languages.add(new Language("C++", R.drawable.plus));
         languages.add(new Language("C", R.drawable.c));
         languages.add(new Language("JavaScript", R.drawable.js));
+        languages.add(new Language("TypeScript", R.drawable.ts));
+        languages.add(new Language("PHP", R.drawable.php));
+        languages.add(new Language("C#", R.drawable.cha));
+        languages.add(new Language("Swift", R.drawable.swift));
+        languages.add(new Language("GO", R.drawable.go));
+        languages.add(new Language("Ruby", R.drawable.ruby));
+        languages.add(new Language("R", R.drawable.r));
+        languages.add(new Language("SQL", R.drawable.sql));
+        languages.add(new Language("Dart", R.drawable.dart));
+        languages.add(new Language("Rust", R.drawable.rust));
+        languages.add(new Language("Scala", R.drawable.scala));
+        languages.add(new Language("MATLAB", R.drawable.matlab));
+        languages.add(new Language("Perl", R.drawable.perl));
+        languages.add(new Language("Bash", R.drawable.bash));
+        languages.add(new Language("Objective-C", R.drawable.objective_c));
 
         filteredList = new ArrayList<>(languages);
         adapter = new LanguageAdapter(this, filteredList);
